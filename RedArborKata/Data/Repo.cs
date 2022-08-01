@@ -81,9 +81,9 @@ namespace RedArbor.Data
 
 
                 var sql = $"Update {typeof(T).Name} SET "; 
-                 Type t = model.GetType();
+                 Type tipe = model.GetType();
 
-                var myPropertyInfo = t.GetProperties();
+                var myPropertyInfo = tipe.GetProperties();
 
                 for (int i = 0; i < myPropertyInfo.Length; i++)
                 {
@@ -94,7 +94,9 @@ namespace RedArbor.Data
                     else
                         sql += myPropertyInfo[i].GetValue(model).ToString() + ",";
                 }
+
                 sql = sql.Substring(0, sql.Length -1);
+
                 sql += $" where id = {id}";
 
                 command.CommandText = sql;
