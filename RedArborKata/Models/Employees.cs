@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace RedArbor.Models
+namespace RedArborKata.Models
 {
     public class Employees 
     {

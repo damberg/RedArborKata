@@ -1,4 +1,4 @@
-﻿namespace RedArbor.Data
+﻿namespace RedArborKata.Data
 {
     public interface IUnitOfWork
     {

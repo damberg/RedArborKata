@@ -1,5 +1,5 @@
-using RedArbor.Models;
-using RedArbor.Services;
+using RedArborKata.Models;
+using RedArborKata.Services;
 using System.Data.Common;
 
 var builder = WebApplication.CreateBuilder(args);

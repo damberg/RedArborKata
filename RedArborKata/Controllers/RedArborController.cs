@@ -1,21 +1,19 @@
 ﻿using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
-using RedArbor.Models;
-using RedArbor.Services;
+using RedArborKata.Models;
+using RedArborKata.Services;
 
-namespace RedArbor.Controllers
+namespace RedArborKata.Controllers
 {
 	[ApiController]
-	[Route("api/redarbor")]
+	[Route("api/RedArbor")]
 	public class RedArborController : ControllerBase
 	{
-		private readonly ILogger<RedArborController> _logger;
 		private RedArborService<Employees> _RedArborService;
 
-		public RedArborController(ILogger<RedArborController> logger, RedArborService<Employees> redArborService)
+		public RedArborController(RedArborService<Employees> RedArborService)
 		{
-			_logger = logger;
-			_RedArborService = redArborService;
+			_RedArborService = RedArborService;
 		}
 
 		/// <summary>

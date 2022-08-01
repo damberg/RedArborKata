@@ -1,6 +1,6 @@
-﻿using RedArbor.Data;
+﻿using RedArborKata.Data;
 
-namespace RedArbor.Services
+namespace RedArborKata.Services
 {
     public static class ConnectionHelperService
     {

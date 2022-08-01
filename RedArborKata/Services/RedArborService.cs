@@ -1,6 +1,6 @@
-﻿using RedArbor.Data;
+﻿using RedArborKata.Data;
 
-namespace RedArbor.Services
+namespace RedArborKata.Services
 {
     public class RedArborService<T>
     {
@@ -17,7 +17,7 @@ namespace RedArbor.Services
 
         public object get() => _repo.GetAll().ToList();
 
-        public object GetByID(int id) => _repo.GetByID(id).First();
+        public object GetByID(int id) => _repo.GetByID(id);
 
         public object Create(T model) => _repo.Create(model);
 

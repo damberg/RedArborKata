@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Data;
 
-namespace RedArbor.Data
+namespace RedArborKata.Data
 {
     public class AdoNetUnitOfWork : IUnitOfWork
     {

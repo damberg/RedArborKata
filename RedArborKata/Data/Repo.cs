@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace RedArbor.Data
+namespace RedArborKata.Data
 {
     public class Repo<T>
     {        
@@ -10,8 +10,6 @@ namespace RedArbor.Data
         {
             _context = context;
         }
-
-		
 
 		public IEnumerable<T> GetAll()
         {
@@ -28,7 +26,7 @@ namespace RedArbor.Data
         {
             using (var command = _context.CreateCommand())
             {
-                command.CommandText = $"SELECT TOP (1) * FROM " + typeof(T).Name + "WHERE id = {id}";
+                command.CommandText = $"SELECT * FROM {typeof(T).Name} WHERE id = {id}";
 
                 return this.Execute(command);
             }

@@ -1,6 +1,6 @@
 ﻿using System.Data;
 
-namespace RedArbor.Data
+namespace RedArborKata.Data
 {
     public interface IConnectionFactory
     {

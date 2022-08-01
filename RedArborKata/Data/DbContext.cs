@@ -1,8 +1,6 @@
-﻿using System.Collections.Generic;
-using System.Data;
-using System.Threading;
+﻿using System.Data;
 
-namespace RedArbor.Data
+namespace RedArborKata.Data
 {
     public class DbContext
     {
