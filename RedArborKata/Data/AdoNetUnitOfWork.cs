@@ -33,7 +33,7 @@ namespace RedArbor.Data
         public void SaveChanges()
         {
             if (_transaction == null)
-                throw new InvalidOperationException("Error in the operation");
+                throw new InvalidOperationException("Error");
 
             _transaction.Commit();
             _committed(this);

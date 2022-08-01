@@ -20,7 +20,7 @@ namespace RedArbor.Data
             {
                 command.CommandText = $"SELECT * FROM {typeof(T).Name}";
 
-                return this.ToList(command);
+                return this.Execute(command);
             }
         }
 
@@ -30,7 +30,7 @@ namespace RedArbor.Data
             {
                 command.CommandText = $"SELECT TOP (1) * FROM " + typeof(T).Name + "WHERE id = {id}";
 
-                return this.ToList(command);
+                return this.Execute(command);
             }
         }
 
@@ -40,7 +40,7 @@ namespace RedArbor.Data
             {
                 command.CommandText = $"SELECT TOP (1) * FROM {typeof(T).Name} order by id desc";
 
-                return this.ToList(command);
+                return this.Execute(command);
             }
         }
 
@@ -66,7 +66,7 @@ namespace RedArbor.Data
 
                 command.CommandText = sql.Substring(0, sql.Length -1) + ")";
 
-                this.ToList(command);
+                this.Execute(command);
 
                 return GetLast();
             }
@@ -113,7 +113,7 @@ namespace RedArbor.Data
             }
         }
 
-        protected IEnumerable<T> ToList(IDbCommand command)
+        protected IEnumerable<T> Execute(IDbCommand command)
         {
             using (var record = command.ExecuteReader())
             {
