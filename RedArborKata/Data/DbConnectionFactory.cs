@@ -21,7 +21,7 @@ namespace RedArbor.Data
         {
             var connection = _provider.CreateConnection();
             if (connection == null)
-                throw new Exception(string.Format("Failed to create a connection using the connection string named '{0}' in app/web.config.", _name));
+                throw new Exception("Failed to create a connection");
 
             connection.ConnectionString = _connectionString;
             connection.Open();
